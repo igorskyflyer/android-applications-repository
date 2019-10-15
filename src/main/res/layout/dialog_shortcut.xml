@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="135dp"
+	android:layout_width="wrap_content"
+	android:gravity="top|bottom|right"
+	android:id="@+id/dialog"
+	android:padding="10dp"
+	android:background="#FAFAFA">
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="Ok"
+		android:layout_width="wrap_content"
+		android:background="@drawable/button"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/dialogOk"
+		android:textColor="#FFFFFF"
+		style="@style/AppTheme"
+		android:minHeight="0dp"
+		android:minWidth="0dp"
+		android:paddingBottom="10dp"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+		android:paddingTop="10dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Add to homescreen"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="match_parent"
+		android:id="@+id/dialogTitle"
+		android:textColor="#037AFF"
+		android:layout_marginBottom="10dp"/>
+
+	<ImageView
+		android:layout_height="35dp"
+		android:layout_width="35dp"
+		android:src="@drawable/ic_launcher"
+		android:layout_below="@id/dialogTitle"
+		android:id="@+id/dialogIcon"
+		android:visibility="invisible"
+		android:layout_alignParentLeft="true"/>
+
+	<EditText
+		android:layout_height="32dp"
+		android:ems="11"
+		android:layout_width="wrap_content"
+		android:id="@+id/dialogName"
+		android:layout_below="@id/dialogTitle"
+		android:layout_toEndOf="@id/dialogIcon"
+		android:textColor="#0591F3"
+		android:layout_alignParentRight="true"
+		android:layout_marginLeft="10dp"
+		android:background="@drawable/textbox"
+		android:paddingTop="3dp"
+		android:paddingBottom="3dp"
+		android:shadowColor="#0078FF"
+		android:shadowRadius="1.5"
+		android:paddingLeft="6dp"/>
+
+	<ProgressBar
+		android:layout_height="35dp"
+		android:layout_width="35dp"
+		android:layout_toLeftOf="@id/dialogName"
+		android:layout_below="@id/dialogTitle"
+		android:id="@+id/dialogLoading"
+		android:visibility="visible"
+		android:background="#FFFFFF"
+		android:layout_alignParentLeft="true"/>
+
+</RelativeLayout>
+

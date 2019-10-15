@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themes">
+        <item>Light</item>
+        <item>Dark</item>
+		<item>Wallpaper</item>
+    </string-array>
+	
+	<string-array name="themes_id">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	
+	<string-array name="skins">
+     <item>Red</item>
+	 <item>Green</item>
+	 <item>Blue</item>
+	 <item>Orange</item>
+	 <item>Yellow</item>
+	 <item>Black</item>
+	</string-array>
+	
+	<string-array name="skins_id">
+	 <item>0</item>
+	 <item>1</item>
+	 <item>2</item>
+	 <item>3</item>
+	 <item>4</item>
+	 <item>5</item>
+	</string-array>
+	
+	<string-array name="ui_size">
+	 <item>Small</item>
+	 <item>Regular</item>
+	 <item>Big</item>
+	</string-array>
+
+	<string-array name="ui_size_id">
+	 <item>0</item>
+	 <item>1</item>
+	 <item>2</item>
+	</string-array>
+	
+	<string-array name="network">
+		<item>Use WiFi and mobile data</item>
+		<item>WiFi only</item>
+		<item>Mobile data only</item>
+	</string-array>
+
+	<string-array name="network_types">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	
+	<string-array name="fx">
+		<item>Emerge</item>
+		<item>Slide</item>
+		<item>Fade</item>
+	</string-array>
+	
+	<string-array name="fx_id">
+	    <item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+</resources>
+                

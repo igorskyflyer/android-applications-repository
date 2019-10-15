@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.neovisio.launcher">
+
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"></uses-permission>
+	
+    <application
+		android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+		android:alwaysRetainTaskState="true"
+		android:launchMode="singleTask"
+		android:exported="true">
+			
+		<receiver
+            android:name="com.neovisio.launcher.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+              <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+		
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+			android:taskAffinity="com.neovisio.launcher.MainActivity">
+            <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+			
+			<intent-filter>
+		     <action android:name="android.intent.action.VIEW"></action>
+		     <category android:name="android.intent.category.DEFAULT"></category>
+			 <category android:name="android.intent.category.BROWSABLE"></category>
+			 <data android:scheme="http" android:host="neovisio.org"></data>
+				<data android:scheme="http" android:host="neovisio.org" pathPrefix="/posts/"></data>
+			</intent-filter>
+			
+			<intent-filter>
+		     <data android:scheme="neovisio" />
+			 <action android:name="android.intent.action.VIEW" />
+			 <category android:name="android.intent.category.DEFAULT" />
+				<action android:name="android.intent.action.MAIN"/>
+			 <category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+        </activity>
+		
+	   <activity
+		   android:name=".SplashActivity"
+		   android:theme="@android:style/Theme.Holo.Light">
+	   </activity>
+	   
+	   <activity
+		   android:name=".OptionsActivity">
+	   </activity>
+	   
+	   <activity
+		   android:name=".ShortcutLauncher"
+		   android:exported="true"
+		   android:launchMode="singleInstance">
+	   </activity>
+	   
+	   <activity
+		   android:name=".MyApps"
+		   android:label="My apps"
+		   android:icon="@drawable/my_apps"
+		   android:launchMode="singleInstance"
+		   android:noHistory="true"
+		   android:excludeFromRecents="true">
+	   </activity>
+	   
+	   <activity
+		   android:name=".Offline">
+	   </activity>
+    </application>
+</manifest>

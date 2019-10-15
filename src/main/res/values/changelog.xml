@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <resources>
+  <string name="app_changelog">
+   1.4\n
+    \t• added the \"My apps\" feature\n
+	\t• reorganized the Options menu\n
+	\t• reduced the memory footprint\n
+   \n
+   1.3\n
+    \t• enhanced homescreen shortcuts\n
+    \t• improved \"Add to homescreen\" function\n
+   \n
+   1.2\n
+    \t• added update checker\n
+   \n
+   1.1\n
+    \t• added UI themes\n
+	\t• added UI skins\n
+	\t• added notifications function\n
+   \n
+   1.0\n
+    \t• initial release
+   \n
+  </string> 
+ </resources>

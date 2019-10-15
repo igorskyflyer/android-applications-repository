@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="Appearance">
+   <ListPreference android:key="app_theme"
+		           android:title="Theme"
+		           android:summary="Application theme"
+		           android:entries="@array/themes"
+		           android:entryValues="@array/themes_id"
+		           android:defaultValue="0" />
+			   
+   <ListPreference android:key="app_skin"
+		           android:title="UI skin"
+		           android:summary="User interface skin"
+		           android:entries="@array/skins"
+		           android:entryValues="@array/skins_id"
+		           android:defaultValue="0" />
+			   
+   <CheckBoxPreference android:key="app_fullscreen"
+	                   android:title="Fullscreen mode"
+					   android:summary="Enable or disable fullscreen mode."
+					   android:defaultValue="false" />
+			   
+   <ListPreference android:key="app_scale"
+	               android:title="UI scale"
+	               android:summary="User interface elements size"
+	               android:entries="@array/ui_size"
+	               android:entryValues="@array/ui_size_id"
+	               android:defaultValue="0" />
+			   
+   <ListPreference android:key="app_effect"
+		           android:title="Launch effect"
+		           android:summary="Effect when launching the application."
+		           android:entries="@array/fx"
+		           android:entryValues="@array/fx_id"
+		           android:defaultValue="0" />
+   </PreferenceCategory>  
+ 
+   <PreferenceCategory android:title="Notifications">
+	<CheckBoxPreference android:title="Silent notifications"
+		                android:key="app_notif_silent"
+						android:summary="Disables notification sound."
+						android:defaultValue="false" />
+   </PreferenceCategory>
+   
+   <PreferenceCategory android:title="Network">
+	<ListPreference android:key="app_policy"
+			        android:title="Large downloads"
+			        android:summary="Specify whether to download large files only on WiFi or not."
+			        android:entries="@array/network"
+			        android:entryValues="@array/network_types"
+			        android:defaultValue="1" />
+   </PreferenceCategory>
+   
+   <PreferenceCategory android:title="Performance">
+	 <CheckBoxPreference android:key="app_cache"
+		                 android:title="Content caching"
+		                 android:summary="Cache the application content for increased performance and decreased Internet usage."
+		                 android:defaultValue="false" />
+					 
+	  <Preference
+	              android:key="app_cache_clear"
+	              android:title="Clear cache"
+	              android:summary="Clear the application cache."
+				  android:dependency="app_cache" />
+	   
+					   
+	   <CheckBoxPreference android:key="app_hardware"
+		                   android:title="Hardware acceleration"
+				           android:summary="Use hardware acceleration to speed up page rendering (recommended: on)."
+				           android:defaultValue="true" />
+   </PreferenceCategory>
+  
+   <PreferenceCategory android:title="Privacy">
+	<CheckBoxPreference android:key="app_autoupdate"
+	                    android:title="Allow auto-update"
+	                    android:summary="Allow the application to periodically check for updates and notify you about them."
+	                    android:defaultValue="false" />
+   </PreferenceCategory>
+   
+   <PreferenceCategory android:title="Advanced">
+    <Preference android:key="app_update"
+                android:title="Check for update..."
+                android:summary="Update the application to get all the latest features." />        
+         
+	<Preference
+		       android:key="app_changelog"
+			   android:title="Changelog"
+			   android:summary="Read all about the newest features of the application." />
+			
+     <Preference android:key="app_about"
+                android:title="About"
+                android:summary="Info about the author of the application."/>
+    </PreferenceCategory>       
+</PreferenceScreen>
